@@ -2,15 +2,10 @@ import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/home.module.css";
-import { signIn, signOut, getSession } from "next-auth/react";
-import type { Session } from "next-auth";
+import { signIn, signOut, getSession, useSession } from "next-auth/react";
 
-interface Props {
-  session: Session;
-}
-
-const Home: NextPage<Props> = ({ session }) => {
-  console.log(session);
+const Home: NextPage = () => {
+  const { data: session } = useSession();
 
   return (
     <div className={styles.container}>
