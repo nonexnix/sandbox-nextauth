@@ -2,9 +2,34 @@
   padding: 0 2rem;
 }
 
+.header {
+  padding: 0.5rem;
+}
+
+.header button {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.header button:hover {
+  background-color: #0071f3e0;
+  color: white;
+  cursor: pointer;
+}
+
+.header div {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  place-items: center;
+}
+
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding-bottom: 4rem;
   flex: 1;
   display: flex;
   flex-direction: column;
